@@ -1,0 +1,6 @@
+F:\Gjun\KH2022NET\CourseWpfApp\CoreLibrary\bin\Release\CoreLibrary.dll
+F:\Gjun\KH2022NET\CourseWpfApp\CoreLibrary\bin\Release\CoreLibrary.pdb
+F:\Gjun\KH2022NET\CourseWpfApp\CoreLibrary\obj\Release\CoreLibrary.csproj.AssemblyReference.cache
+F:\Gjun\KH2022NET\CourseWpfApp\CoreLibrary\obj\Release\CoreLibrary.csproj.CoreCompileInputs.cache
+F:\Gjun\KH2022NET\CourseWpfApp\CoreLibrary\obj\Release\CoreLibrary.dll
+F:\Gjun\KH2022NET\CourseWpfApp\CoreLibrary\obj\Release\CoreLibrary.pdb

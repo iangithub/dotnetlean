@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "81cbea6d-7fac-499f-81a3-bb73ab5e331d": {
+      "ProjectGuid": "81cbea6d-7fac-499f-81a3-bb73ab5e331d",
+      "DisplayName": "CourseWpfApp",
+      "ColorIndex": 0
+    },
+    "e10ab4b5-99ed-49c8-9f3f-cc4f01461e89": {
+      "ProjectGuid": "e10ab4b5-99ed-49c8-9f3f-cc4f01461e89",
+      "DisplayName": "CoreLibrary",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "其他檔案",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
