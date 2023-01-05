@@ -1,0 +1,61 @@
+﻿{
+   "CodeGenerationMode": 1,
+   "ContextClassName": "KhNetCourseContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "DbContextModels",
+   "OutputPath": "EntityModels",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "DataEfCore",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[course]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[courseschedule]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[stucourseschedule]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[student]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[sysadmin]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[teacher]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "DevCode.KhNetCourse",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

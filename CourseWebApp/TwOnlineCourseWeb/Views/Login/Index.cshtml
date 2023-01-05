@@ -1,0 +1,34 @@
+﻿@model UserLoginModel;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>會員登入</strong>
+    <div asp-validation-summary="All"></div>
+    <label>@ViewBag.Msg</label>
+</div>
+<form asp-action="SignIn" asp-controller="Login" method="post" class="mx-1 mx-md-4">
+    <div class="form-group mt-3">
+        <label class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" asp-for="Email" placeholder="email" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-6">
+            <input type="password" class="form-control" asp-for="Pwd" placeholder="password" aria-label="password" required>
+        </div>
+    </div>
+    <div class="form-group" style="margin-top:20px">
+        <div class="col-sm-6">
+            <button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
+        </div>
+        <div class="col-sm-6">
+            <label>no account ? </label>
+            <a asp-action="UserRegister" asp-controller="Login">Register Now</a>
+        </div>
+
+    </div>
+</form>

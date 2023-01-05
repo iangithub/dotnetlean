@@ -1,0 +1,83 @@
+﻿@model IEnumerable<CoreLib.Models.CourseScheduleViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="margin:10px 0px 10px 10px">
+    <form asp-action="CourseScheduleQuery" asp-controller="Home" method="post">
+        <div class="row">
+            <div class="col">
+                <input type="text" name="CourseName" value="@ViewBag.CourseName" class="form-control" placeholder="Course name" aria-label="Course name">
+            </div>
+            <div class="col">
+                <input type="text" name="TeacherName" value="@ViewBag.TeacherName" class="form-control" placeholder="Teacher name" aria-label="Teacher name">
+            </div>
+            <div class="col" style="text-align: left">
+                <button type="submit" class="btn btn-primary">查詢</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="row text-center justify-content-center">
+    @{
+        if (TempData["ShopCar"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @TempData["ShopCar"].ToString()
+            </div>
+        }
+
+        if (Model != null && Model.Count() > 0)
+        {
+            foreach (var item in Model)
+            {
+                var modalId = "sh" + item.Id;
+
+                <div class="col" style="margin-top:5px">
+                    <div class="card" style="width: 18rem;">
+                        <img src="~/Imgs/c1.jpg" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title" style="font-weight:bold">@item.CourseCode</h6>
+                            <p class="card-text">@item.CourseName (時數 : @item.CourseTimes)</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">@item.TeacherName</li>
+                        </ul>
+                        <form asp-action="ShopCar" asp-controller="Shop" method="post">
+                            <input type="hidden" name="scheduleid" value="@item.Id">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#@modalId">簡介</button>
+                                @if (Context.User.Identity.IsAuthenticated)
+                                {
+                                    <button type="submit" class="btn btn-outline-primary">購課</button>
+                                }
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="@modalId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">課程簡介</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                @item.CourseDesc
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-light" role="alert">
+                目前沒有上架課程
+            </div>
+        }
+    }
+</div>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DataEfCore</id>
+    <version>1.0.0</version>
+    <authors>DataEfCore</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="F:\Gjun\TW2022NET\TwOnlineCourse\DataEfCore\bin\Debug\netcoreapp3.1\DataEfCore.dll" target="lib\netcoreapp3.1\DataEfCore.dll" />
+  </files>
+</package>

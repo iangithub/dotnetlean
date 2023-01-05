@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CoreLib.Models.StuCourseScheduleViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>我的課程</strong>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">課程名稱</th>
+            <th scope="col">開課日期</th>
+            <th scope="col">授課講師</th>
+            <th scope="col">
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if (Model !=null && Model.Any())
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CourseName</td>
+                        <td>@item.Sdate.ToString("yyyy/MM/dd")</td>
+                        <td>@item.TeacherName</td>
+                        <td>
+                            <form asp-action="DelBooking" asp-controller="Shop" method="post">
+                                <input type="hidden" name="scheduleid" value="@item.Id">
+                                <button type="submit" class="btn btn-danger">刪除課程</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="4">- 尚無任何課程資料 -</td>
+                </tr>
+            }
+        }
+        
+    </tbody>
+</table>
