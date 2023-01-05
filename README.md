@@ -1,6 +1,6 @@
 # dotnetlean
 
-dotnet 教學基礎專案應用範例
+dotnet 教學基礎專案應用範例，是基於從0-1的.NET實作練習，程式碼並不涉及優化及設計模式的套用
 
 <h2>CourseWpfApp</h2>
 
