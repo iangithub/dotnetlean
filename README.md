@@ -39,3 +39,8 @@ WPF+ADO.NET+MS-SQL 範例專案，其中已實作＂管理員帳號管理＂，�
 2. 已有學員選課記錄的開課資料不得刪除
 
 <h2>StuImage — 學員實作成品</h2>
+
+<h2>CourseWebApp</h2>
+
+一個以ASP.NET Core 3.1 MVC + Entity Framework (EF) Core 建立的線上課程系統基礎範例，其中已實作＂學生帳號註冊/登入/登出/變更密碼＂，＂開課資料查詢＂，＂學生選課資料＂，其餘功能皆同學可以參考已實作程式碼，可自行完成作品。
+資料庫Schema請參考教材內容（延續　CourseWpfApp）。
